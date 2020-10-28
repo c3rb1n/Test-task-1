@@ -1,0 +1,38 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 28px;
+    &__notifications {
+        display: flex;
+        margin-right: 24px;
+        &:hover svg {
+            @include iconHoverTemplate($mainColor);
+        }
+    }
+}
+
+.redCircle {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: $headerNotificationsCircleColor;
+    border-radius: 100%;
+    margin: 2px 0 0 9px;
+}
+
+@media (max-width: 1380px) {
+    .icons {
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .redCircle {
+        width: 14px;
+        height: 14px;
+        margin: 4px 0 0 20px;
+    }
+}

@@ -1,0 +1,13 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.notificationsIcon {
+    @include iconTemplate(20, 23, $fourthColor);
+}
+
+@media (max-width: 500px) {
+    .notificationsIcon {
+        @include iconTemplate(40, 40, $fourthColor);
+        margin-top: 2px;
+    }
+}

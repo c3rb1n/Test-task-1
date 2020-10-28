@@ -1,0 +1,50 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.logo {
+    background: linear-gradient(to bottom, $logoGradientTopColor, $accentColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 50px 0 47px 0;
+    &__link {
+        @include fontTemplate(16, 900);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        line-height: 19px;
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin: 20px 0 0 35px;
+        &__link {
+            justify-content: center;
+        }
+        &__text {
+            flex-direction: row;
+            span {
+                font-size: 22px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        margin-top: 50px;
+        &__text {
+            span {
+                font-size: 46px;
+                padding: 10px 0;
+            }
+        }
+    }
+}

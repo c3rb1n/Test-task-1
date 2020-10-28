@@ -1,0 +1,15 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.commentsIcon {
+    @include iconTemplate(20, 21, $secondColor);
+    &:hover {
+        @include iconHoverTemplate($fourthColor);
+    }
+}
+
+@media (max-width: 500px) {
+    .commentsIcon {
+        @include iconTemplate(40, 40, $secondColor);
+    }
+}

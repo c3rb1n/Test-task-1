@@ -1,0 +1,16 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.likeIconWhite {
+    @include iconTemplate(22, 22, $secondColor);
+    margin-right: -2px;
+    &:hover {
+        @include iconHoverTemplate($likeIconRedColor);
+    }
+}
+
+@media (max-width: 500px) {
+    .likeIconWhite {
+        @include iconTemplate(40, 40, $secondColor);
+    }
+}

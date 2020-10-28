@@ -1,0 +1,7 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.arrowUpIcon {
+    @include iconTemplate(13, 13, $mainColor);
+    margin-top: 3px;
+}

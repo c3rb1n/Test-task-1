@@ -1,0 +1,15 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.settingsIcon {
+    @include iconTemplate(23, 23, $fourthColor);
+    &:hover {
+        @include iconHoverTemplate($mainColor);
+    }
+}
+
+@media (max-width: 500px) {
+    .settingsIcon {
+        @include iconTemplate(40, 40, $fourthColor);
+    }
+}

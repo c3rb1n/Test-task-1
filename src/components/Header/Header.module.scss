@@ -1,0 +1,40 @@
+@import "src/common_styles/variables";
+
+.header {
+    grid-area: header;
+    display: flex;
+    max-width: 1048px;
+    height: 76px;
+    background-color: $secondColor;
+    border-radius: 10px;
+    margin: 30px 70px 0 0;
+    &1 {
+        display: flex;
+    }
+    &2 {
+        display: flex;
+    }
+}
+
+@media (max-width: 1380px) {
+    .header {
+        height: 152px;
+        justify-content: space-around;
+        flex-direction: column;
+        &1 {
+            justify-content: space-between;
+        }
+        &2 {
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 160px;
+        width: 768px;
+        border-radius: 0 0 10px 10px;
+        margin: -1px 70px 20px 0;
+    }
+}

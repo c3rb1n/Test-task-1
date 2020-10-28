@@ -1,0 +1,13 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.exitIcon {
+    @include iconTemplate(22, 22, $exitIconMainColor);
+    margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+    .exitIcon {
+        @include iconTemplate(40, 40, $exitIconMainColor);
+    }
+}

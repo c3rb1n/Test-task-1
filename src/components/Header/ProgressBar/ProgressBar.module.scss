@@ -1,0 +1,52 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.progressBar {
+    display: flex;
+    align-items: center;
+    margin: 4px 0 0 27px;
+    &__barContainer {
+        width: 380px;
+        height: 36px;
+        background-color: $sixthColor;
+        border-radius: 10px;
+        margin-top: -5px;
+        margin-left: 10px;
+    }
+    &__label {
+        @include fontTemplate(14, 700);
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: inherit;
+        color: $secondColor;
+        margin: 10px 0 0 16px;
+        :last-child {
+            color: $thirdColor;
+            font-family: "Museo Sans 500 Medium";
+            margin-right: 32px;
+        }
+    }
+}
+
+@media (max-width: 1380px) {
+    .progressBar {
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .progressBar {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+        &__barContainer {
+            height: 50px;
+        }
+        &__label {
+            font-size: 20px;
+            margin: 14px 0 0 15px;
+        }
+    }
+}

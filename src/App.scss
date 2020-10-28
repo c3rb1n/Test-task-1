@@ -1,0 +1,29 @@
+@import "common_styles/variables";
+
+.app {
+    display: grid;
+    grid-template-areas:
+            "sidebar header"
+            "sidebar content";
+    grid-template-columns: 1fr 10fr;
+    gap: 20px;
+}
+
+.content-wrapper {
+    grid-area: content;
+    max-width: 1048px;
+    min-height: 1055px;
+    background-color: $secondColor;
+    border-radius: 10px;
+    margin: 0 70px 179px 0;
+}
+
+@media (max-width: 768px) {
+    .app {
+        grid-template-areas:
+            "sidebar"
+            "header"
+            "content";
+        gap: 0;
+    }
+}

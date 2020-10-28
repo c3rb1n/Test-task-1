@@ -1,0 +1,7 @@
+@import "src/common_styles/mixins";
+
+.rules {
+    @include contentTemplate();
+}
+
+@include mediaMaxWidth500pxContentTemplate("rules");

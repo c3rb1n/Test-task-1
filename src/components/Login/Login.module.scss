@@ -1,0 +1,84 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.login {
+    @include contentTemplate();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    &__heading {
+        width: 350px;
+        height: 350px;
+        background-color: $secondColor;
+        border-radius: 10px;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__mail, &__password {
+        width: 200px;
+        color: $fifthColor;
+        background-color: $mainColor;
+        outline: none;
+        padding: 5px 15px;
+        border: 3px solid $mainColor;
+        border-radius: 5px;
+        &:focus {
+            transition: 0.3s;
+            border: 3px solid $accentColor;
+            box-shadow: 0 0 10px $accentColor;
+        }
+        &::placeholder {
+            color: $fifthColor;
+        }
+    }
+    &__mail {
+        margin-bottom: 10px;
+    }
+    &__password {
+        margin-bottom: 18px;
+    }
+    &__login {
+        background-color: $bgColor;
+        color: $fifthColor;
+        outline: none;
+        padding: 7px 25px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 155px;
+        &:hover {
+            transition: 0.3s background-color;
+            background-color: $accentColor;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .login {
+        &__heading {
+            width: 280px;
+        }
+        &__mail, &__password {
+            width: 160px;
+        }
+        &__login {
+            margin-right: 115px;
+        }
+    }
+}

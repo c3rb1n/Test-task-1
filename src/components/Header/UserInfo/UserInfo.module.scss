@@ -1,0 +1,40 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px 0 0 28px;
+    &__img {
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        margin-right: 12px;
+    }
+    &__text {
+        @include fontTemplate (14, 700);
+        color: $mainColor;
+        line-height: 16px;
+        margin-top: -3px;
+        &:hover {
+            transition: 0.3s color;
+            color: $accentColor;
+        }
+    }
+}
+
+@media (max-width: 1380px) {
+    .userInfo {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .userInfo {
+        &__text {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+}

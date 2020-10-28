@@ -1,0 +1,36 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.exit {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px 15% 17px 26%;
+    border-top: 1px solid $exitTopBorderColor;
+    margin-top: 80px;
+    &__text {
+        margin: -1px 0 0 2px;
+        color: $thirdColor;
+    }
+    &:hover {
+        transition: 0.3s background-color;
+        background-color: $fifthColor;
+        svg {
+            @include iconHoverTemplate($mainColor);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .exit {
+        padding: 0;
+        border-top: none;
+        margin-top: 24px;
+        &__text {
+            display: none;
+        }
+        &:hover {
+            background-color: $secondColor;
+        }
+    }
+}

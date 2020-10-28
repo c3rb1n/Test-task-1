@@ -1,0 +1,66 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.navItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 14% 11.7px 16.5%;
+    padding: 7.2px 0 2px 22.2px;
+    &__icon {
+        margin-top: 1px;
+        svg {
+            @include iconTemplate(22, 22, $fourthColor);
+            margin-right: 10px;
+        }
+    }
+    &__text {
+        margin-left: 2px;
+        color: $thirdColor;
+    }
+    &:hover {
+        transition: 0.3s background-color;
+        background-color: $fifthColor;
+        border-radius: 30px;
+        svg {
+            @include iconHoverTemplate($mainColor);
+        }
+    }
+}
+
+.active {
+    background-color: $fifthColor;
+    border-radius: 30px;
+    svg {
+        fill: $mainColor;
+    }
+}
+
+@media (max-width: 768px) {
+    .navItem {
+        padding-left: 5px;
+        margin: 20px 47.5px 0 0;
+        &__text {
+            display: none;
+        }
+        &:hover {
+            background-color: $secondColor;
+            border-radius: 0;
+        }
+    }
+    .active {
+        background-color: $secondColor;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .navItem {
+        margin-right: 27px;
+        &__icon {
+            svg {
+                @include iconTemplate(40, 40, $fourthColor);
+            }
+        }
+    }
+}

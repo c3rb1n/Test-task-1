@@ -1,0 +1,59 @@
+@import "src/common_styles/variables";
+@import "functions";
+
+@mixin fontFaceMuseoSansCyrl($num) {
+    @font-face {
+        font-family: fontName($num);
+        src: url("../assets/fonts/MuseoSansCyrl-#{$num}.eot");
+        src: url("../assets/fonts/MuseoSansCyrl-#{$num}.eot?#iefix") format("embedded-opentype"),
+        url("../assets/fonts/MuseoSansCyrl-#{$num}.woff") format("woff"),
+        url("../assets/fonts/MuseoSansCyrl-#{$num}.ttf") format("truetype");
+    }
+}
+@mixin fontTemplate ($size, $familyNum) {
+    font: {
+        family: fontName($familyNum);
+        size: #{$size}px;
+    }
+}
+
+@mixin contentTemplate() {
+    &__header {
+        @include fontTemplate(16, 700);
+        color: $contentTitleColor;
+        margin: 22px 0 30px 35px;
+    }
+}
+
+@mixin iconTemplate($width, $height, $color) {
+    width: #{$width}px;
+    height: #{$height}px;
+    fill: $color;
+}
+
+@mixin iconHoverTemplate($color) {
+    cursor: pointer;
+    transition: 0.3s fill;
+    fill: $color;
+}
+
+@mixin mediaMaxWidth500pxContentTemplate($className) {
+    @media (max-width: 500px) {
+        .#{$className} {
+            &__header {
+                @include fontTemplate(22, 900);
+                margin: 22px 0 0 35px;
+            }
+        }
+    }
+}
+
+@mixin mediaMaxWidth500pxContentTemplate($className) {
+    @media (max-width: 500px) {
+        .#{$className} {
+            &__header {
+                @include fontTemplate(22, 900);
+            }
+        }
+    }
+}

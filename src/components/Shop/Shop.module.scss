@@ -1,0 +1,7 @@
+@import "src/common_styles/mixins";
+
+.shop {
+    @include contentTemplate();
+}
+
+@include mediaMaxWidth500pxContentTemplate("shop");

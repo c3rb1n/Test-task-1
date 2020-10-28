@@ -1,0 +1,55 @@
+.newsItems {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 8 {
+    .newsItem-#{$i} {
+        height: 303px;
+        margin: 0 20px 20px 0;
+    }
+}
+
+@for $i from 3 through 6 {
+    .newsItem-#{$i} {
+        width: calc(25% - 30px);
+    }
+}
+
+.newsItem-1,
+.newsItem-2,
+.newsItem-7,
+.newsItem-8{
+    width: calc(50% - 40px);
+}
+
+.newsItem-1,
+.newsItem-3,
+.newsItem-7 {
+    margin-left: 30px;
+}
+
+@media (max-width: 1380px) {
+    @for $i from 1 through 8 {
+        .newsItem-#{$i} {
+            width: calc(50% - 55px);
+            margin: 0 35px 35px 0;
+        }
+    }
+    .newsItem-1,
+    .newsItem-3,
+    .newsItem-5,
+    .newsItem-7 {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+    @for $i from 1 through 8 {
+        .newsItem-#{$i} {
+            width: calc(100% - 40px);
+            height: 400px;
+            margin: 0 41px 35px 35px;
+        }
+    }
+}

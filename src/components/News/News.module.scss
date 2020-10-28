@@ -1,0 +1,41 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.news {
+    @include contentTemplate();
+    display: flex;
+    flex-direction: column;
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__popups {
+        display: flex;
+        color: $thirdColor;
+        font-size: 14px;
+        margin: 25px 5px 0 0;
+    }
+}
+
+@media (max-width: 1380px) {
+    .news {
+        &__header {
+            margin: 22px 0 30px 35px;
+        }
+        &__popups {
+            margin-right: 11px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .news {
+        &__header {
+            @include fontTemplate (22, 900);
+            margin-bottom: 85px;
+        }
+        &__popups {
+            font-size: 22px;
+        }
+    }
+}

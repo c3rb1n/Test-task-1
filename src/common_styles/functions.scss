@@ -1,0 +1,13 @@
+@function museoSans() {
+    @return "Museo Sans";
+}
+
+@function fontName ($num) {
+    @if $num == 500 {
+        @return "#{museoSans()} 500 Medium";
+    } @else if $num == 700 {
+        @return "#{museoSans()} 700 Bold";
+    } @else {
+        @return "#{museoSans()} 900 Black";
+    }
+}

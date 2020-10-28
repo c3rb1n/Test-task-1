@@ -1,0 +1,74 @@
+@import "src/common_styles/variables";
+
+.city {
+    display: flex;
+    margin-right: 234px;
+}
+
+.popup {
+    position: absolute;
+    width: 158px;
+    background-color: $secondColor;
+    cursor: pointer;
+    padding: 6px 15px 4px 16px;
+    border: 1px solid $mainColor;
+    border-radius: 7px;
+    margin: -7px 0 0 59px;
+    &__activeLabel {
+        display: flex;
+        justify-content: space-between;
+        color: $mainColor;
+    }
+    &__active {
+        box-shadow: 0 0 10px $popupsBoxShadowColor;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 5px -15px 0 -16px;
+    }
+    &__item {
+        border-top: 1px solid $sixthColor;
+        padding: 5px 16px;
+        &:hover {
+            transition: 0.3s color;
+            color: $mainColor;
+        }
+        &:first-child {
+            border-bottom: none;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .city {
+        margin: 0 176px 50px 0;
+    }
+    .popup {
+        margin: 20px 0 0 -2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .city {
+        margin-top: -2px;
+    }
+}
+
+@media (max-width: 500px) {
+    .city {
+        margin-right: 224px;
+    }
+    .popup {
+        width: 230px;
+        padding: 12px 15px 8px 17px;
+        margin-top: 35px;
+        &__item {
+            border-top: 2px solid $sixthColor;
+        }
+    }
+}

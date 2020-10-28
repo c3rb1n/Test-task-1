@@ -1,0 +1,13 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.clockIcon {
+    @include iconTemplate(16, 16, $secondColor);
+    margin: 0 2px -4px 0;
+}
+
+@media (max-width: 500px) {
+    .clockIcon {
+        @include iconTemplate(26, 26, $secondColor);
+    }
+}

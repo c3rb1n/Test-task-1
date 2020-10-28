@@ -1,0 +1,12 @@
+@import "src/common_styles/variables";
+@import "src/common_styles/mixins";
+
+.viewsIcon {
+    @include iconTemplate(22, 22, $secondColor);
+}
+
+@media (max-width: 500px) {
+    .viewsIcon {
+        @include iconTemplate(40, 40, $secondColor);
+    }
+}

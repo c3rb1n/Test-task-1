@@ -1,0 +1,21 @@
+@import "common_styles/variables";
+@import "common_styles/mixins";
+
+@include fontFaceMuseoSansCyrl(500);
+@include fontFaceMuseoSansCyrl(700);
+@include fontFaceMuseoSansCyrl(900);
+
+body {
+    /*@include fontTemplate(16, 500);*/
+    background-color: $bgColor;
+    font: {
+        family: "Museo Sans 500 Medium";
+        size: 16px;
+    }
+    margin: 0;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
