@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Test-task-1/static/css/main.40c20ac6.chunk.css",
+    "main.js": "/Test-task-1/static/js/main.9fd47255.chunk.js",
+    "main.js.map": "/Test-task-1/static/js/main.9fd47255.chunk.js.map",
+    "runtime-main.js": "/Test-task-1/static/js/runtime-main.1b7693ed.js",
+    "runtime-main.js.map": "/Test-task-1/static/js/runtime-main.1b7693ed.js.map",
+    "static/js/2.95a406c2.chunk.js": "/Test-task-1/static/js/2.95a406c2.chunk.js",
+    "static/js/2.95a406c2.chunk.js.map": "/Test-task-1/static/js/2.95a406c2.chunk.js.map",
+    "index.html": "/Test-task-1/index.html",
+    "precache-manifest.ecfb9df610ce7ac92d3099cc2416769f.js": "/Test-task-1/precache-manifest.ecfb9df610ce7ac92d3099cc2416769f.js",
+    "service-worker.js": "/Test-task-1/service-worker.js",
+    "static/css/main.40c20ac6.chunk.css.map": "/Test-task-1/static/css/main.40c20ac6.chunk.css.map",
+    "static/js/2.95a406c2.chunk.js.LICENSE.txt": "/Test-task-1/static/js/2.95a406c2.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/Test-task-1/static/media/MuseoSansCyrl-900.3b1501e4.ttf",
+    "static/media/avatar.jpg": "/Test-task-1/static/media/avatar.c75417d5.jpg",
+    "static/media/newsBackground1.png": "/Test-task-1/static/media/newsBackground1.6e2b1258.png",
+    "static/media/newsBackground2.png": "/Test-task-1/static/media/newsBackground2.a742ce24.png",
+    "static/media/newsBackground3.png": "/Test-task-1/static/media/newsBackground3.36f979ab.png",
+    "static/media/newsBackground4.png": "/Test-task-1/static/media/newsBackground4.1e2b7850.png",
+    "static/media/newsBackground5.png": "/Test-task-1/static/media/newsBackground5.2771fec6.png",
+    "static/media/newsBackground6.png": "/Test-task-1/static/media/newsBackground6.89287081.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b7693ed.js",
+    "static/js/2.95a406c2.chunk.js",
+    "static/css/main.40c20ac6.chunk.css",
+    "static/js/main.9fd47255.chunk.js"
+  ]
+}
